@@ -72,11 +72,11 @@ function populateCategoryFilters(professions) {
     `).join('');
 
     // Add click handlers
-    container.querySelectorAll('.category-filter-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const profession = this.dataset.
-            const profession = this.dataset.profession;
-            document.getElementById('professionFilter').value = profession;
+container.querySelectorAll('.category-filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const profession = this.dataset.profession;
+        document.getElementById('professionFilter').value = profession;
+
             
             // Update active state
             container.querySelectorAll('.category-filter-btn').forEach(b => b.classList.remove('active'));
@@ -442,4 +442,5 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+
 }
